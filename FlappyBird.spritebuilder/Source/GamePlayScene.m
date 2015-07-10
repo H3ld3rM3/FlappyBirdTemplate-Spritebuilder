@@ -9,7 +9,7 @@
     // your code here
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
-        timeSinceObstacle = 0.0f;
+    
 }
 
 -(void)update:(CCTime)delta
@@ -26,7 +26,7 @@
         [self addObstacle];
         
         // Then reset the timer.
-        timeSinceObstacle = 0.0f;
+        timeSinceObstacle = 0.0f;	
     }
 }
 
@@ -36,6 +36,7 @@
     
     [character flap];
     [self addObstacle];
+    timeSinceObstacle = 0.0f;
 
 }
 
